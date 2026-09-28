@@ -1,0 +1,3 @@
+{{ range where .Site.RegularPages "Section" "writing" }}
+    <div> - <a href="{{ .File }}">{{ .Title }}</a></div>
+{{ end }}

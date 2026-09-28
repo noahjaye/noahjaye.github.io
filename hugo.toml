@@ -1,0 +1,25 @@
+baseURL = 'https://noahjaye.github.io/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+[params]
+  math = true
+  [[params.navLinks]]
+    name = "Home"
+  [[params.navLinks]]
+    name = "Home"
+    path = "/"
+    group = "right"
+  [[params.navLinks]]
+    name = "Projects"
+    path = "/projects/"
+    group = "right"
+  [[params.navLinks]]
+    name = "Resume"
+    path = "/Resume/"
+    group = "right"
+  [[params.navLinks]]
+    name = "Contact"
+    group = "right"
+    path = "/contact/"
+[markup.goldmark.renderer]
+  unsafe = true

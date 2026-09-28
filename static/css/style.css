@@ -1,0 +1,107 @@
+:root {
+    --navbar-space: 100px;
+}
+@font-face {
+  font-family: 'Orbitron';
+  src: url('/fonts/Orbitron-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "Comic Mono";
+    src: url("/fonts/ComicMono.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    overscroll-behavior: none;
+}
+p, li {
+    font-family: Space Mono, monospace;
+}
+a {
+    color: #555;
+    text-decoration-color: #ac1c1c;
+    text-decoration-thickness: 1.5px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+@keyframes weight-intro {
+    from { font-weight: 300; }
+    to   { font-weight: 700; }
+}
+.title {
+    text-align: center;
+    font-family: 'Orbitron';
+    font-size: 2.1rem;
+    font-weight: 450;
+    padding: 0px 20px;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc(-1 * var(--navbar-space) + 15px);
+    margin-bottom: 64px;
+    /* put this back in eventually?*/
+    /* animation: weight-intro 1s ease-out forwards;  */
+}
+
+.back-tab {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 80px;
+    background: var(--accent, #333);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    transition: background 0.2s ease, transform 0.2s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;   /* ← this was missing */
+}
+
+.back-tab:hover {
+    background: #555;
+}
+
+.back-tab-text {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 20px;
+    pointer-events: none;
+}
+
+body {
+    background: #e8e8e8;
+    margin: 0;
+}
+
+.page-wrap {
+    box-sizing: border-box;      /* you need this — see note below */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: var(--navbar-space) 30px 100px 30px;
+    background: #e9e9e9;
+    min-height: 100vh;
+}
+
+
+
+
+
+code {
+    font-family: "Comic Mono", monospace;
+}

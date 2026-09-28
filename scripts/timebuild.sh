@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+makingdir="./content/writing/Making.md"
+str=$(<"$makingdir")
+
+# These can be easily put into parameters, but dynamic blogs seem gimmicky for more than this I think
+delims=(
+    "∆ Git hash goes here ∆"
+    "∆ Build time goes here ∆"
+)
+
+hug=$(hugo build --templateMetrics)
+
+metrics='```'
+metrics+="
+Template Metrics:${hug#*Template Metrics:}
+"
+metrics+='```'
+
+replacements=(
+    "$(git rev-parse --short HEAD)"
+    "$metrics"
+)
+
+remaining="$str"
+output=""
+
+for i in "${!delims[@]}"; do
+    delim="${delims[$i]}"
+    replacement="${replacements[$i]}"
+
+    output+="${remaining%"$delim"*}"
+    output+="$replacement"
+    remaining="${remaining#*"$delim"}"
+done
+
+output+="$remaining"
+
+outfile="${1:-$makingdir}"
+printf '%s\n' "$output" > "$makingdir"

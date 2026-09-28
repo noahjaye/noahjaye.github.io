@@ -1,0 +1,25 @@
+<header class="site-nav">
+    <link rel="stylesheet" href="/css/nav.css"> 
+  <nav class="nav-container">
+    {{ $currentPage := . }}
+
+    <div class="nav-top">
+
+      {{ range where site.Params.navLinks "group" "!=" "right" }}
+        <a href="{{ .path | relURL }}"
+           class="nav-link">
+          Noah Jaye
+        </a>
+      {{ end }}
+    </div>
+
+    <div class="nav-top">
+      {{ range where site.Params.navLinks "group" "==" "right" }}
+        <a href="{{ .path | relURL }}"
+           class="nav-link{{ if eq $currentPage.RelPermalink (.path | relURL) }} active{{ end }}">
+          {{ .name }}
+        </a>
+      {{ end }}
+    </div>
+  </nav>
+</header>

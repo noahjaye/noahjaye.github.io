@@ -1,0 +1,4 @@
+{{ $src := .Get "src" }}
+<iframe src="{{ $src | relURL }}" width="100%" height="{{ .Get "height" | default "800px" }}" style="border: none;">
+  <p>Can't display the PDF. <a href="{{ $src | relURL }}">Download it</a>.</p>
+</iframe>

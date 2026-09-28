@@ -1,0 +1,2 @@
+{{- $href := .Get "href" | default (.Get 0) -}}
+<a href="{{ $href }}" target="_blank">{{ .Inner | .Page.RenderString (dict "display" "inline") -}}</a>
