@@ -3,7 +3,7 @@ date = '2026-09-25T13:14:31-04:00'
 draft = false
 title = 'About'
 +++
-Hi! I'm Noah Jaye. I study Computer Engineering at McMaster University.
+Hi! I'm Noah Jaye. I study Computer Engineering at McMaster University, graduating April 2029.
 
 I am (perhaps too) broadly interested in computing. Currently, I'm working with embedded systems, networking/protocols, and simulation/testing. I'm one of two software Co-Leads on 
 {{<targetblank href="https://github.com/macformula">}}McMaster Formula Electric{{</targetblank>}}, mainly focused on our SIL (Software-In-the-Loop) testing system.
