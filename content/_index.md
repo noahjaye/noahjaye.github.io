@@ -14,8 +14,8 @@ Areas I'm curious about for the future:
  * Arcane C++ Wizardry
 
 Some areas I've already explored:
- * Radar DSP
- * [Quantum Computing](writing/Quantum)
- * The Web ([Colophon](writing/Making))
+ * [Radar DSP](resume)
+ * [Quantum Computing](writing/quantum)
+ * The Web ([Colophon](writing/making))
 
 

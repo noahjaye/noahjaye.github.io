@@ -115,7 +115,8 @@ jobs:
       - name: Profile
         run: |
           echo "Profiling build time and modifying Making.md!"
-          ./scripts/timebuild.sh ./content/blog/Making.md
+          ./scripts/timebuild.sh ./content/writing/Making.md
+          
           
       - name: Build
         run: |
@@ -125,6 +126,8 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \
             --cacheDir "${{ runner.temp }}/.cache/hugo"
+          echo "2klsp"
+          ls -LR ${{ runner.temp }}/.cache/hugo
 
       - name: Cache save
         uses: actions/cache/save@v6

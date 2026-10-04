@@ -15,7 +15,7 @@ title = 'My New Hugo Project'
     group = "right"
   [[params.navLinks]]
     name = "Resume"
-    path = "/Resume/"
+    path = "/resume/"
     group = "right"
   [[params.navLinks]]
     name = "Contact"
@@ -23,3 +23,8 @@ title = 'My New Hugo Project'
     path = "/contact/"
 [markup.goldmark.renderer]
   unsafe = true
+  [markup.goldmark.extensions.passthrough]
+  enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+    block = [['$$', '$$']]
+    inline = [['\(', '\)']]

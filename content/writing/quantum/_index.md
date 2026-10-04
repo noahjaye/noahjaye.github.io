@@ -1,18 +1,28 @@
 +++
 date = '2026-09-27T21:14:16-04:00'
-draft = true
+draft = false
 title = 'Quantum Reflection'
+math = true
 +++
 
 For my final report in my grade 12 Physics class, I decided to cover Quantum Computing with a fun example involving cows and inheritances.
 
 The report is split into 3 sections: covering my understanding of computing in general, posing a classical computing problem, and showing how Quantum Computing may help with similar problems.
 
-I'm not sure how correct I got it, and I am not nor was I at the time a theoretical computer scientist (deeply unfortunately). Here are some errors that I have caught more recently:
+I'm not sure how correct I got it, and I am not currently nor was I at the time a theoretical computer scientist. Here are some errors that I have caught since:
 
-- <!-- add errors here -->
+\- This definitely isn't an unstructured search problem
 
-If you have ~20 minutes to spare, I have included the report below.
+\- Tons of numeric errors:\
+&emsp;&emsp;&emsp;\- Thousands of years to crack the toy problem is wrong.\
+&emsp;&emsp;&emsp;\- Grover's algorithm is not a \(\sqrt{n}\) speedup, it's a \(\frac{\sqrt{n}}{2}\) speedup.\
+&emsp;&emsp;&emsp;\- You should only run Grover's algorithm \(\frac{\pi}{4}\sqrt{n}\) times
+
+\- I don't think I have a good understanding of entanglement at this point in time, and so I couldn't have then.
+
+\- I mis-described the requirements of a unitary operator.
+
+If you have ~20 minutes to spare, I have included the report below. If you want the short version, I also made a [Presentation](qcp) to show my class. Please feel free to contact me with corrections, I'd love to talk!
 
 ## Quantum Computing
 

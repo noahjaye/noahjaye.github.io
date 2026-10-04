@@ -10,11 +10,14 @@ delims=(
     "∆ Build time goes here ∆"
 )
 
+tmp=$(mktemp -d)
+
+hugo build --destination "$tmp" >/dev/null 2>&1
 hug=$(hugo build --templateMetrics)
 
 metrics='```'
 metrics+="
-Template Metrics:${hug#*Template Metrics:}
+${hug#*Template Metrics:}
 "
 metrics+='```'
 

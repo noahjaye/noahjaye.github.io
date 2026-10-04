@@ -1,0 +1,16 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $width := .Get "width" | default "100%" -}}
+{{- $caption := .Get "caption" -}}
+
+{{- if findRE `^\d+$` $width }}{{ $width = printf "%spx" $width }}{{ end -}}
+
+{{- $url := $src | relURL -}}
+{{- with $.Page.Resources.GetMatch $src }}{{ $url = .RelPermalink }}{{ end -}}
+
+<figure style="width: {{ $width }}; max-width: 100%; margin: 1.5rem auto; text-align: center;">
+  <img src="{{ $url }}" alt="{{ $alt }}" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+  {{- with $caption }}
+  <figcaption style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.8;">{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>

@@ -105,3 +105,31 @@ body {
 code {
     font-family: "Comic Mono", monospace;
 }
+.project-entry {
+  margin-bottom: 1.2em;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 1.25em;
+}
+
+
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.25em;
+}
+
+/* .project-name a {
+} */
+
+.project-date {
+  font-size: 0.7em;
+  color: #888;
+  white-space: nowrap;
+  margin-left: auto;   /* pushes date to the right edge of .project-header */
+}

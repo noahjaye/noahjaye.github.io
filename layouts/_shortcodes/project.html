@@ -1,0 +1,10 @@
+<div class="project-entry">
+  <div class="project-header">
+  <span class="project-name"><a href="{{ .Get "link" }}">{{ .Get "name" }}</a></span>
+  <span class="project-date">{{ .Get "date" }}</span>
+  </div>
+  {{ with .Get "desc" }}
+    <div class="project-desc">{{ . }}</div>
+  {{ end }}
+  <br>
+</div>

@@ -1,3 +1,6 @@
-{{ range where .Site.RegularPages "Section" "writing" }}
-    <div> - <a href="{{ .File }}">{{ .Title }}</a></div>
+{{/*If this is ever used for not blog, paramaterize*/}}
+{{ with .Site.GetPage "/writing" }}
+  {{ range .Pages.ByDate.Reverse }}
+    <div> - <a href="{{ .RelPermalink }}">{{ .Title | default .File.ContentBaseName }}</a></div>
+  {{ end }}
 {{ end }}
