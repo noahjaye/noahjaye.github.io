@@ -27,7 +27,7 @@ metrics+='```'
 
 short=$(git rev-parse --short HEAD)
 full=$(git rev-parse HEAD)
-hashlink="[\`${short}\`](https://github.com/${repo}/commit/${full})"
+hashlink="{{<targetblank href=\"https://github.com/${repo}/commit/${full}\">}}<code>${short}</code>{{</targetblank>}}"
 
 replacements=(
     "$hashlink"
